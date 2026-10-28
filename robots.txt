@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.davidburrells.co.uk/sitemap.xml
