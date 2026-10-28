@@ -5,8 +5,8 @@
   // Paste your Formspree endpoints here (https://formspree.io/f/xxxxxxxx).
   // While a value is empty, the form opens an email to CONTACT_EMAIL instead.
   var CONFIG = {
-    CONTACT_ENDPOINT: "",
-    FOLLOW_ENDPOINT: "",
+    CONTACT_ENDPOINT: "https://formspree.io/f/mrppkngq",
+    FOLLOW_ENDPOINT: "https://formspree.io/f/xbggynjy",
     CONTACT_EMAIL: "me@davidburrells.co.uk",
     // Google Analytics 4 Measurement ID, e.g. "G-XXXXXXXXXX".
     // While empty, no banner is shown and nothing is loaded.
