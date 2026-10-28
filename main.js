@@ -7,7 +7,10 @@
   var CONFIG = {
     CONTACT_ENDPOINT: "",
     FOLLOW_ENDPOINT: "",
-    CONTACT_EMAIL: "me@davidburrells.co.uk"
+    CONTACT_EMAIL: "me@davidburrells.co.uk",
+    // Google Analytics 4 Measurement ID, e.g. "G-XXXXXXXXXX".
+    // While empty, no banner is shown and nothing is loaded.
+    GA_ID: "G-7SRJB1CR6G"
   };
 
   // ---- Header: solid background after scrolling, mobile menu ----------------
@@ -24,6 +27,79 @@
         toggle.setAttribute("aria-expanded", open ? "true" : "false");
         toggle.textContent = open ? "Close" : "Menu";
       });
+    }
+  }
+
+
+  // ---- Analytics (Google Analytics 4, loaded only after consent) -----------
+  var CONSENT_KEY = "db_analytics_consent";
+
+  function readConsent() {
+    try { return window.localStorage.getItem(CONSENT_KEY); } catch (e) { return null; }
+  }
+  function saveConsent(value) {
+    try { window.localStorage.setItem(CONSENT_KEY, value); } catch (e) { /* ignore */ }
+  }
+  function loadAnalytics() {
+    if (!CONFIG.GA_ID || window.__gaLoaded) return;
+    window.__gaLoaded = true;
+    var tag = document.createElement("script");
+    tag.async = true;
+    tag.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(CONFIG.GA_ID);
+    document.head.appendChild(tag);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", CONFIG.GA_ID);
+  }
+  function clearAnalyticsCookies() {
+    var host = window.location.hostname.split(".").slice(-2).join(".");
+    document.cookie.split(";").forEach(function (c) {
+      var name = c.split("=")[0].trim();
+      if (name === "_ga" || name.indexOf("_ga_") === 0 || name === "_gid") {
+        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=." + host;
+        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+      }
+    });
+  }
+  function showBanner() {
+    var existing = document.getElementById("consent");
+    if (existing) { existing.hidden = false; return; }
+    var box = document.createElement("div");
+    box.id = "consent";
+    box.className = "consent";
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-labelledby", "consent-title");
+    box.innerHTML =
+      '<p id="consent-title" class="consent-title">Analytics</p>' +
+      '<p>I\u2019d like to use Google Analytics to see which pages are read. It sets cookies. It is not used for advertising. See the <a href="privacy.html">privacy notice</a>.</p>' +
+      '<div class="consent-actions">' +
+      '<button type="button" class="btn btn-light btn-sm" data-choice="granted">Accept</button>' +
+      '<button type="button" class="btn btn-outline on-dark btn-sm" data-choice="denied">Decline</button>' +
+      '</div>';
+    box.addEventListener("click", function (event) {
+      var choice = event.target && event.target.getAttribute && event.target.getAttribute("data-choice");
+      if (!choice) return;
+      saveConsent(choice);
+      box.hidden = true;
+      if (choice === "granted") loadAnalytics(); else clearAnalyticsCookies();
+    });
+    document.body.appendChild(box);
+  }
+
+  if (CONFIG.GA_ID) {
+    var consent = readConsent();
+    if (consent === "granted") loadAnalytics();
+    else if (consent !== "denied") showBanner();
+
+    var legal = document.querySelector(".legal");
+    if (legal) {
+      var link = document.createElement("button");
+      link.type = "button";
+      link.className = "linkish";
+      link.textContent = "Cookie settings";
+      link.addEventListener("click", showBanner);
+      legal.appendChild(link);
     }
   }
 
