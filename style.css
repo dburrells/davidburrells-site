@@ -291,3 +291,6 @@ blockquote.big footer strong { display: block; color: var(--on-dark); font-weigh
   .hero-media, .hero .seq { animation: none; }
   .thumb img, .card, .link-arrow::after { transition: none; }
 }
+
+.site-header .mark-name { font-size: 1.45rem; white-space: nowrap; }
+@media (max-width: 52rem) { .site-header .mark-name { font-size: 1.25rem; } }
