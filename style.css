@@ -310,3 +310,5 @@ blockquote.big footer strong { display: block; color: var(--on-dark); font-weigh
 .social-list a:hover i { transform: translateX(4px); }
 .social-list a:hover span { color: var(--gold); }
 @media (max-width: 52rem) { .contact-side { padding: 2rem 1.5rem; } }
+
+.paper .soon { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); padding-top: 0.7rem; white-space: nowrap; }
