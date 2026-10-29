@@ -294,3 +294,19 @@ blockquote.big footer strong { display: block; color: var(--on-dark); font-weigh
 
 .site-header .mark-name { font-size: 1.45rem; white-space: nowrap; }
 @media (max-width: 52rem) { .site-header .mark-name { font-size: 1.25rem; } }
+
+/* Contact: direct-contact panel */
+.contact-side { background: var(--navy); color: #fff; padding: 2.5rem 2.25rem; border-radius: 4px; }
+.contact-side .eyebrow { color: var(--gold); margin: 0 0 0.9rem; }
+.contact-side h2 { font-family: var(--serif); font-weight: 500; font-size: 1.9rem; line-height: 1.15; margin: 0 0 1.5rem; color: #fff; }
+.contact-side .big-mail { display: inline-block; font-size: 1.15rem; color: #fff; text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 0.2rem; margin-bottom: 2rem; word-break: break-word; }
+.contact-side .big-mail:hover { color: var(--gold); }
+.social-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid rgba(255,255,255,0.18); }
+.social-list li { margin: 0; border-bottom: 1px solid rgba(255,255,255,0.18); }
+.social-list a { display: flex; align-items: baseline; gap: 0.9rem; padding: 1rem 0; color: #fff; text-decoration: none; }
+.social-list a span { font-weight: 500; }
+.social-list a small { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+.social-list a i { margin-left: auto; font-style: normal; color: var(--gold); transition: transform .2s; }
+.social-list a:hover i { transform: translateX(4px); }
+.social-list a:hover span { color: var(--gold); }
+@media (max-width: 52rem) { .contact-side { padding: 2rem 1.5rem; } }
