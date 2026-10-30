@@ -57,15 +57,37 @@
         </div>
       </article>
       <article class="media-card">
-        <a class="video-poster audio" href="https://crypto-current.co/dave-burrells-pluto-digitals-yield-optimization-platform/" target="_blank" rel="noopener" aria-label="Listen: Crypto Current episode 240">
+        <button class="video-poster" type="button" data-yt="3kBvqyU99Po" aria-label="Play: Crypto Current episode 240 with Dave Burrells">
           <span class="play" aria-hidden="true"></span><span class="poster-label">Crypto Current &middot; Episode 240</span>
-        </a>
+        </button>
         <div class="media-body">
           <p class="meta-line">Podcast &middot; 2021</p>
           <h3>Pluto Digital&rsquo;s Yield Optimization Platform</h3>
           <p>From banking and SaaS operations into crypto: how Pluto Digital took over the YOP project, and what a yield optimisation platform needs to be trustworthy enough for everyday users.</p>
-          <p class="links"><a class="link-arrow" href="https://crypto-current.co/dave-burrells-pluto-digitals-yield-optimization-platform/" target="_blank" rel="noopener">Listen to the episode</a></p>
+          <p class="links"><a class="link-arrow" href="https://www.youtube.com/watch?v=3kBvqyU99Po" target="_blank" rel="noopener">Watch on YouTube</a><a class="link-arrow" href="https://crypto-current.co/dave-burrells-pluto-digitals-yield-optimization-platform/" target="_blank" rel="noopener">Episode page</a></p>
           <p class="tags"><span>DeFi</span><span>Product</span><span>Operations</span></p>
+        </div>
+      </article>
+      <article class="media-card">
+        <button class="video-poster" type="button" data-yt="PG1Yf_H92d4" aria-label="Play: Introduction to YOP Finance">
+          <span class="play" aria-hidden="true"></span><span class="poster-label">Introduction to YOP Finance</span>
+        </button>
+        <div class="media-body">
+          <p class="meta-line">Video interview &middot; 2022</p>
+          <h3>Introduction to YOP Finance</h3>
+          <p>An introduction to YOP Finance, the DeFi yield platform, in conversation with me as COO.</p>
+          <p class="links"><a class="link-arrow" href="https://www.youtube.com/watch?v=PG1Yf_H92d4" target="_blank" rel="noopener">Watch on YouTube</a></p>
+        </div>
+      </article>
+      <article class="media-card">
+        <button class="video-poster" type="button" data-yt="uG6Gm5uy7DM" aria-label="Play: The Power of Radical Candour">
+          <span class="play" aria-hidden="true"></span><span class="poster-label">Dunamis EQ Leadership Podcast</span>
+        </button>
+        <div class="media-body">
+          <p class="meta-line">Dunamis EQ Leadership Podcast</p>
+          <h3>The Power of Radical Candour: Building Successful Teams and Motivating Employees</h3>
+          <p>From fund accountant to self-taught developer and product manager: how I think about managing and developing people, learning from good and bad managers, honest feedback through radical candour, and the human side of leadership and remote work.</p>
+          <p class="links"><a class="link-arrow" href="https://www.youtube.com/watch?v=uG6Gm5uy7DM" target="_blank" rel="noopener">Watch on YouTube</a></p>
         </div>
       </article>
     </div>
@@ -78,6 +100,7 @@
     <ul class="press-list">
       <li><span class="meta-line">X Spaces &middot; 24 Aug 2022</span><a href="https://x.com/i/spaces/1YqKDqNWgnkGV" target="_blank" rel="noopener">Zebu Live: The Current State of DeFi</a><span class="press-note">A live audio discussion on where DeFi stood, co-hosted by Jillian Godsil. I joined as COO of YOP Finance.</span></li>
       <li><span class="meta-line">X Spaces &middot; 12 Aug 2022</span><a href="https://x.com/i/spaces/1RDGlgylyPlKL" target="_blank" rel="noopener">Resurgence x YOP: Gaming Spaces</a><span class="press-note">A live AMA on bringing DeFi yield vaults together with in-game assets, ahead of the Resurgence Gen 0 Cryotag drop.</span></li>
+      <li><span class="meta-line">X Spaces AMA &middot; 15 Nov 2022 &middot; recording</span><a href="https://www.youtube.com/watch?v=jZsbrF7geh0" target="_blank" rel="noopener">Crypto Miners x YOP Finance</a><span class="press-note">Recording of a live Twitter Space AMA, on YouTube.</span></li>
     </ul>
     <p class="fine">Recordings of live Spaces may no longer be available.</p>
   </div>
@@ -172,7 +195,7 @@
   </div>
 </footer>
 <script src="main.js" defer></script>
-<script>document.querySelectorAll("[data-yt]").forEach(function(b){b.addEventListener("click",function(){var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.yt+"?autoplay=1";f.title="Video player";f.allow="autoplay; encrypted-media; picture-in-picture";f.allowFullscreen=true;f.className="video-frame";b.replaceWith(f);});});</script>
+<script>document.querySelectorAll("[data-yt]").forEach(function(b){b.addEventListener("click",function(){var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.yt+"?autoplay=1"+(b.dataset.start?"&start="+b.dataset.start:"");f.title="Video player";f.allow="autoplay; encrypted-media; picture-in-picture";f.allowFullscreen=true;f.className="video-frame";b.replaceWith(f);});});</script>
 <script>document.querySelectorAll("[data-copy]").forEach(function(b){b.addEventListener("click",function(){var el=document.getElementById(b.dataset.copy),t=Array.prototype.map.call(el.parentNode.querySelectorAll("p"),function(p){return p.textContent}).join("\n\n");function done(){b.textContent="Copied";setTimeout(function(){b.textContent="Copy"},1800)}if(navigator.clipboard){navigator.clipboard.writeText(t).then(done,function(){})}else{done()}})});</script>
 </body>
 </html>
