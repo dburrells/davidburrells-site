@@ -341,3 +341,10 @@ blockquote.big footer strong { display: block; color: var(--on-dark); font-weigh
   .stage-hero::after { background: linear-gradient(180deg, rgba(10,15,26,0) 60%, var(--navy) 100%); }
   .stage-copy { position: relative; padding: 1.5rem var(--gutter) 0; }
 }
+
+/* home portrait */
+.split figure.home-portrait { aspect-ratio: 4 / 5; max-width: 26rem; justify-self: end; position: relative; overflow: hidden; }
+.split figure.home-portrait::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,15,26,0) 55%, rgba(10,15,26,.55) 100%); pointer-events: none; }
+.home-portrait img { object-position: 40% 20%; }
+.home-portrait img { filter: grayscale(1) contrast(1.08) brightness(.95); }
+.home-portrait::after { z-index: 2; }
