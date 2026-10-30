@@ -374,3 +374,18 @@ blockquote.big footer strong { display: block; color: var(--on-dark); font-weigh
 
 .fine { margin: 1.25rem 0 0; font-size: .85rem; color: var(--mid); }
 .yt-poster { border-radius: 4px; }
+
+/* press kit */
+.kit-intro { max-width: 40rem; color: #3A4452; margin: 0 0 2rem; }
+.kit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.25rem, 3vw, 2rem); align-items: stretch; }
+.kit-card { background: #fff; border: 1px solid var(--line-light); border-radius: 4px; padding: 1.75rem; display: flex; flex-direction: column; gap: .9rem; }
+.kit-card h3 { font-size: 1.5rem; }
+.kit-card p { margin: 0; color: #3A4452; font-size: 1rem; }
+.kit-list { margin: 0; padding-left: 1.1rem; color: #3A4452; }
+.kit-list li { margin-bottom: .5rem; }
+.copy-btn { align-self: flex-start; background: none; border: 1px solid var(--line-light); border-radius: 999px; padding: .35rem 1rem; font: inherit; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text); cursor: pointer; }
+.copy-btn:hover { border-color: var(--gold); }
+.kit-photo img { width: 100%; max-width: 15rem; height: auto; border-radius: 4px; }
+@media (max-width: 899px) { .kit-grid { grid-template-columns: 1fr; } }
+
+.timeline-close { font-family: var(--serif); font-size: clamp(1.5rem, 2.4vw, 2rem); line-height: 1.3; max-width: 44rem; margin: 3rem 0 0; padding-left: 1.5rem; border-left: 1px solid var(--gold); color: var(--text); }

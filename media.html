@@ -17,7 +17,7 @@
 <meta property="og:url" content="https://www.davidburrells.co.uk/media.html">
 <meta property="og:image" content="https://www.davidburrells.co.uk/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -102,7 +102,44 @@
     <div class="section-head"><h2 id="press-h">In the press</h2></div>
     <ul class="press-list">
       <li><span class="meta-line">City AM &middot; October 2021</span><a href="https://www.cityam.com/yop-is-taken-over-by-pluto-digital/" target="_blank" rel="noopener">Pluto Digital takes over the YOP DeFi project</a><span class="press-note">Coverage of the acquisition and relaunch plans.</span></li>
+      <li><span class="meta-line">Press release &middot; May 2022</span><a href="https://finance.yahoo.com/news/yop-finance-launches-three-click-140100394.html" target="_blank" rel="noopener">YOP Finance launches its three-click yield platform</a><span class="press-note">Company announcement of the public launch of YOP, where I was COO. Distributed via GlobeNewswire.</span></li>
     </ul>
+  </div>
+</section>
+
+<section class="section light" id="press-kit" aria-labelledby="kit-h">
+  <div class="wrap">
+    <div class="section-head"><h2 id="kit-h">Press kit</h2></div>
+    <p class="kit-intro">For event organisers, hosts and journalists. Please use these as they are, or get in touch if you need something different.</p>
+    <div class="kit-grid">
+      <article class="kit-card">
+        <h3>Short bio</h3>
+        <p id="bio-short">Dave Burrells is an operator, founder and product leader with more than two decades of experience across financial services, software, AI, fintech and crypto, including more than a decade at JPMorgan. His home ground is the COO role: he was COO of YOP Finance, a DeFi yield platform, and has also served as CEO of Bento, a crypto wallet company. He is now Chief Commercial Officer at Alludium, where he helps commercialise AI-native software built around real professional workflows, and he writes the Agentic Economy Series on how autonomous software will come to transact.</p>
+        <button class="copy-btn" type="button" data-copy="bio-short">Copy</button>
+      </article>
+      <article class="kit-card">
+        <h3>Long bio</h3>
+        <p id="bio-long">Dave Burrells began his career in finance in 1999 and joined JPMorgan in 2004 as a fund accountant. Over twelve years he moved through business analysis and software development into project and product management, and he returned in 2018–19 as Product Manager &amp; Innovation Lead. He encountered blockchain in 2013 while exploring trading automation and has been interested in programmable, digitally native financial infrastructure ever since.</p>
+        <p>During that second stint he built an AI meeting minute-taker to automate stenography and support people with auditory disabilities; the technology is the subject of a patent. He has since worked in startups as COO, CEO, founder and board adviser across SaaS, AI, fintech and crypto, including as COO of YOP Finance and CEO of Bento, a crypto wallet company.</p>
+        <p>Operations is where he is most at home, turning ambitious technology into something that runs reliably. Today he is Chief Commercial Officer at Alludium and writes about the agentic economy: what happens as AI moves from answering questions to acting, and eventually to transacting on its own behalf.</p>
+        <button class="copy-btn" type="button" data-copy="bio-long">Copy</button>
+      </article>
+      <article class="kit-card">
+        <h3>Speaking topics</h3>
+        <ul class="kit-list">
+          <li>The agentic economy: from AI that answers to AI that transacts</li>
+          <li>Identity, authority and trust for AI agents</li>
+          <li>DeFi and digital-asset infrastructure, from the operator's side</li>
+          <li>From regulated finance to startups: building across banking, SaaS, AI and crypto</li>
+          <li>AI-native software for professional workflows</li>
+        </ul>
+      </article>
+      <article class="kit-card kit-photo">
+        <h3>Photo</h3>
+        <img src="headshot-sm.jpg" alt="David Burrells" width="480" height="480" loading="lazy">
+        <p class="links"><a class="link-arrow" href="davidburrells-headshot-hires.jpg" download>Download high-resolution headshot</a></p>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -136,5 +173,6 @@
 </footer>
 <script src="main.js" defer></script>
 <script>document.querySelectorAll("[data-yt]").forEach(function(b){b.addEventListener("click",function(){var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.yt+"?autoplay=1";f.title="Video player";f.allow="autoplay; encrypted-media; picture-in-picture";f.allowFullscreen=true;f.className="video-frame";b.replaceWith(f);});});</script>
+<script>document.querySelectorAll("[data-copy]").forEach(function(b){b.addEventListener("click",function(){var el=document.getElementById(b.dataset.copy),t=Array.prototype.map.call(el.parentNode.querySelectorAll("p"),function(p){return p.textContent}).join("\n\n");function done(){b.textContent="Copied";setTimeout(function(){b.textContent="Copy"},1800)}if(navigator.clipboard){navigator.clipboard.writeText(t).then(done,function(){})}else{done()}})});</script>
 </body>
 </html>
