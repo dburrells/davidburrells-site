@@ -312,3 +312,32 @@ blockquote.big footer strong { display: block; color: var(--on-dark); font-weigh
 @media (max-width: 52rem) { .contact-side { padding: 2rem 1.5rem; } }
 
 .paper .soon { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); padding-top: 0.7rem; white-space: nowrap; }
+
+/* about page: portrait + stage photos */
+.about-grid { display: grid; grid-template-columns: minmax(0, 40rem) minmax(0, 20rem); gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+.about-aside { position: sticky; top: calc(var(--header-h) + 2rem); }
+.portrait { margin: 0; border-radius: 4px; overflow: hidden; aspect-ratio: 1; }
+.portrait img { width: 100%; height: 100%; object-fit: cover; }
+.portrait-cap { margin-top: 1.75rem; font-size: 0.875rem; color: var(--mid); }
+.portrait-cap strong { display: block; color: var(--text); font-weight: 600; }
+.stage { background: var(--navy); color: var(--on-dark); padding-bottom: clamp(4rem, 8vw, 6.5rem); }
+.stage-hero { position: relative; isolation: isolate; }
+.stage-hero > img { display: block; width: 100%; height: clamp(18rem, 36vw, 32rem); object-fit: cover; object-position: 50% 30%; filter: saturate(.8) contrast(1.03) brightness(.9); }
+.stage-hero::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(10,15,26,.55) 0%, rgba(10,15,26,0) 28%, rgba(10,15,26,.55) 70%, var(--navy) 100%); }
+.stage-copy { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; padding-bottom: 2rem; }
+.stage-copy .eyebrow { margin-bottom: .5rem; }
+.stage-copy h2 { font-size: clamp(2rem, 4vw, 3rem); }
+.stage-row { display: grid; grid-template-columns: 1.55fr 1fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; margin-top: 2.5rem; }
+.stage-row figure { margin: 0; border-radius: 4px; overflow: hidden; }
+.stage-row figure img { display: block; width: 100%; height: auto; filter: saturate(.75) contrast(1.04) brightness(.92); }
+.stage-text p { color: #D6DCE6; font-size: 1.125rem; margin: 1.5rem 0 1.75rem; }
+@media (max-width: 899px) { .stage-row { grid-template-columns: 1fr; } }
+.portrait { position: relative; overflow: visible; }
+.portrait::before { content: ""; position: absolute; inset: 0; border: 1px solid var(--gold); transform: translate(14px, 14px); border-radius: 4px; z-index: 0; }
+.portrait img { position: relative; z-index: 1; border-radius: 4px; }
+@media (max-width: 899px) { .about-grid { grid-template-columns: 1fr; } .about-aside { position: static; order: -1; max-width: 16rem; } }
+@media (max-width: 899px) {
+  .stage-hero > img { height: auto; }
+  .stage-hero::after { background: linear-gradient(180deg, rgba(10,15,26,0) 60%, var(--navy) 100%); }
+  .stage-copy { position: relative; padding: 1.5rem var(--gutter) 0; }
+}
