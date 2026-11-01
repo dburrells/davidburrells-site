@@ -393,3 +393,4 @@ blockquote.big footer strong { display: block; color: var(--on-dark); font-weigh
 /* Video poster thumbnails (YouTube image, darkened for legibility) */
 .video-poster[style*="--thumb"] { background: linear-gradient(to top, rgba(10,15,26,.88) 0%, rgba(10,15,26,.25) 55%, rgba(10,15,26,.1) 100%), var(--thumb) center / cover no-repeat, var(--navy); }
 .video-poster[style*="--thumb"] .poster-label { text-shadow: 0 1px 12px rgba(0,0,0,.6); }
+.video-poster.yt-poster.has-photo { background: linear-gradient(to top, rgba(10,15,26,.85) 0%, rgba(10,15,26,.2) 60%, rgba(10,15,26,.1) 100%), url(stage.jpg) 88% center / cover no-repeat, var(--navy); }
